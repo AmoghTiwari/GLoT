@@ -42,7 +42,7 @@ def read_data(folder, set):
         'features': [],
     }
 
-    # occluders = load_occluders('/home/shenxiaolong.sxl/remote_t1/data/VOC2012')
+    # occluders = load_occluders('./data/VOC2012')
 
     model = spin.get_pretrained_hmr()
 

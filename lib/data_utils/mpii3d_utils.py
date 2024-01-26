@@ -92,7 +92,7 @@ def read_train_data(dataset_path, debug=False):
         'features': [],
     }
 
-    # occluders = load_occluders('/home/shenxiaolong.sxl/remote_t1/data/VOC2012')
+    # occluders = load_occluders('./data/VOC2012')
 
     model = spin.get_pretrained_hmr()
 
