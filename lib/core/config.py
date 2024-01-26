@@ -20,15 +20,15 @@ from yacs.config import CfgNode as CN
 
 # CONSTANTS
 # You may modify them at will
-GLoT_DB_DIR = '/home/shenxiaolong.sxl/remote_t1/data/preprocessed_data'
-AMASS_DIR = '/home/shenxiaolong.sxl/remote_t1/data/amass'
-INSTA_DIR = '/home/shenxiaolong.sxl/remote_t1/data/insta_variety'
-MPII3D_DIR = '/home/shenxiaolong.sxl/remote_t1/data/mpi_inf_3dhp'
-THREEDPW_DIR = '/home/shenxiaolong.sxl/remote_t1/data/3dpw'
-H36M_DIR = '/home/shenxiaolong.sxl/remote_t1/data/h36m'
-PENNACTION_DIR = '/home/shenxiaolong.sxl/remote_t1/data/penn_action'
-POSETRACK_DIR = '/home/shenxiaolong.sxl/remote_t1/data/posetrack'
-BASE_DATA_DIR = '/home/shenxiaolong.sxl/remote_t1/data/base_data'
+GLoT_DB_DIR = './data/preprocessed_data'
+AMASS_DIR = './data/amass'
+INSTA_DIR = './data/insta_variety'
+MPII3D_DIR = './data/mpi_inf_3dhp'
+THREEDPW_DIR = './data/3dpw'
+H36M_DIR = './data/h36m'
+PENNACTION_DIR = './data/penn_action'
+POSETRACK_DIR = './data/posetrack'
+BASE_DATA_DIR = './data/base_data'
 
 # Configuration variables
 cfg = CN()
