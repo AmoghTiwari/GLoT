@@ -4,7 +4,7 @@ DEBUG_FREQ: 5
 LOGDIR: ''
 DEVICE: 'cuda'
 EXP_NAME: 'table2_3dpw_exp'
-OUTPUT_DIR: '/home/shenxiaolong.sxl/exp_dir/experiments' # your path
+OUTPUT_DIR: './exp_dir/experiments' # your path
 NUM_WORKERS: 16
 SEED_VALUE: 1
 DATASET:
@@ -23,7 +23,7 @@ TRAIN:
   BATCH_SIZE: 64
   NUM_ITERS_PER_EPOCH: 500
   PRETRAINED: './data/pretrained_models/table2_3dpw_weights.pth.tar' # for testing
-  PRETRAINED_REGRESSOR: '/home/shenxiaolong.sxl/remote_t1/data/base_data/spin_model_checkpoint.pth.tar' # your path
+  PRETRAINED_REGRESSOR: './data/base_data/spin_model_checkpoint.pth.tar' # your path
   RESUME: ''
   START_EPOCH: 0
   END_EPOCH: 80
