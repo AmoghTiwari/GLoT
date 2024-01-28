@@ -142,8 +142,10 @@ if __name__ == "__main__":
     elif target_dataset == 'h36m':
         if cfg.TITLE == 'repr_table4_h36m_mpii3d_model':
             data_path = f'./data/preprocessed_data/{target_dataset}_{set}_25fps_db.pt'  # Table 4
+            # data_path = f'./data/preprocessed_data/{target_dataset}_{set}_front_25fps_tight_db.pt'  # Table 6
         elif cfg.TITLE == 'repr_table6_h36m_model':
             data_path = f'./data/preprocessed_data/{target_dataset}_{set}_front_25fps_tight_db.pt'  # Table 6
+
     elif target_dataset == 'mpii3d':
         set = 'val'
         data_path = f'./data/preprocessed_data/{target_dataset}_{set}_scale12_db.pt'  #
@@ -405,5 +407,13 @@ if __name__ == "__main__":
 
         print(f"\nEvaluated total {tot_num_pose} poses")
         full_res.pop(0, None)
-        full_res = {k: np.mean(np.concatenate(v)) for k, v in full_res.items()}
-        print(full_res)
+        print("Printing Mean Values")
+        disp_res = {k: np.mean(np.concatenate(v)) for k, v in full_res.items()}
+        print(disp_res)
+        print("Printing Variances Values")
+        disp_res = {k: np.var(np.concatenate(v)) for k, v in full_res.items()}
+        print(disp_res)
+
+        print("Printing Std Dev Values")
+        disp_res = {k: np.std(np.concatenate(v)) for k, v in full_res.items()}
+        print(disp_res)
