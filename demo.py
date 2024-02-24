@@ -78,12 +78,12 @@ def main(args, cfgs):
         yolo_img_size=args.yolo_img_size,
     )
     tracking_results = mot(image_folder)
-
+    # joblib.dump(tracking_results, "tr1.pkl")
     # remove tracklets if num_frames is less than MIN_NUM_FRAMES
     for person_id in list(tracking_results.keys()):
         if tracking_results[person_id]['frames'].shape[0] < MIN_NUM_FRAMES:
             del tracking_results[person_id]
-
+    # joblib.dump(tracking_results, "tr2.pkl")
 
     """ Get GLoT model """
     seq_len = 16
@@ -323,9 +323,9 @@ def main(args, cfgs):
         cv2.destroyAllWindows()
 
     """ Save rendered video """
-    save_output_name = f'tcmr_{vid_name.replace(".mp4", "")}_output.mp4'
+    save_output_name = f'glot_{vid_name.replace(".mp4", "")}_output.mp4'
     save_output_path = os.path.join(output_path, save_output_name)
-    save_input_name = f'tcmr_{vid_name.replace(".mp4", "")}_input.mp4'
+    save_input_name = f'glot_{vid_name.replace(".mp4", "")}_input.mp4'
     save_input_path = os.path.join(output_path, save_input_name)
 
     images_to_video(img_folder=output_img_folder, output_vid_file=save_output_path)
