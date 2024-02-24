@@ -3,3 +3,6 @@ data
 exp_dir
 demo_output
 demo.mp4
+*pkl
+*npy
+output
