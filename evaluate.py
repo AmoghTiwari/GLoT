@@ -417,3 +417,5 @@ if __name__ == "__main__":
         print("Printing Std Dev Values")
         disp_res = {k: np.std(np.concatenate(v)) for k, v in full_res.items()}
         print(disp_res)
+        joblib.dump(full_res, f"output/error_arrays/glot_result_{target_dataset}.pkl")
+        
